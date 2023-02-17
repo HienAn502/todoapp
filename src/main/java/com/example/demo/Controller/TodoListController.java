@@ -17,12 +17,12 @@ public class TodoListController {
     @Autowired
     TodoListRepository todoListRepository;
 
-    @RequestMapping(value="/")
-    public String getAllTasks(Model model) {
-        List<TodoTask> todoTasks = todoListRepository.findAll();
-        model.addAttribute("todo_tasks", todoTasks);
-        return "index";
-    }
+//    @RequestMapping(value="/")
+//    public String getAllTasks(Model model) {
+//        List<TodoTask> todoTasks = todoListRepository.findAll();
+//        model.addAttribute("todo_tasks", todoTasks);
+//        return "index";
+//    }
 
 //    @RequestMapping(value = "/{id}")
 //    public String getTaskById(@PathVariable(value = "id") Long id, Model model) {
@@ -31,13 +31,13 @@ public class TodoListController {
 //        return "taskDetail";
 //    }
 
-    @PostMapping("/")
-    public String saveTask(@RequestBody TodoTask todoTask, Model model) {
-        todoListRepository.save(todoTask);
-        List<TodoTask> todoTasks = todoListRepository.findAll();
-        model.addAttribute("todo_tasks", todoTasks);
-        return "todoList";
-    }
+//    @PostMapping("/")
+//    public String saveTask(@RequestBody TodoTask todoTask, Model model) {
+//        todoListRepository.save(todoTask);
+//        List<TodoTask> todoTasks = todoListRepository.findAll();
+//        model.addAttribute("todo_tasks", todoTasks);
+//        return "todoList";
+//    }
 
 
 }
