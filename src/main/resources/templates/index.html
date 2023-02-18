@@ -33,13 +33,13 @@
                 <td th:text="${todo_task.name}"></td>
                 <td th:text="${todo_task.state}"></td>
                 <td class="action">
-                    <button class="edit-btn">Edit</button>
-                    <button class="fa fa-trash trash-btn"></button>
+                    <button class="edit-btn" th:onclick="|location.href='@{/edit(id=${todo_task.id})}'|">Edit</button>
+                    <button class="fa fa-trash trash-btn" th:onclick="|location.href='@{/delete(id=${todo_task.id})}'|"></button>
                 </td>
             </tr>
         </tbody>
     </table>
-    <button class="todo-button">
+    <button class="todo-button" onclick="location.href='/add'">
         <i class="fas fa-plus-circle fa-lg"></i>
     </button>
 </body>

@@ -13,6 +13,9 @@ public class TodoTask {
     private String name;
     @Column(columnDefinition = "default \"incomplete\"")
     private String state;
+
+    public TodoTask() {}
+
     public void setId(Long id) {
         this.id = id;
     }
